@@ -4,7 +4,6 @@
   padding: 65px 0;
 }
 
-
 .feature-card-list {
   margin-top: 55px;
   column-gap: 31px;
@@ -16,7 +15,7 @@
       margin-bottom: 30px;
       column-gap: 8.25px;
 
-      img{
+      img {
         display: flex;
       }
 
@@ -28,24 +27,16 @@
         }
       }
     }
-    h5{
+
+    h5 {
       font-style: normal;
       font-weight: 700;
       font-size: 20px;
       line-height: 26px;
-      /* identical to box height */
-
-      color: #000000;
+      color: $black;
     }
-    //span{
-    //  font-style: normal;
-    //  font-weight: 500;
-    //  font-size: 14px;
-    //  line-height: 18px;
-    //  color: #000000;
-    //}
 
-    .btn{
+    .btn {
       height: 29px;
       padding: 10px 12px;
       color: #2639ED;
@@ -54,12 +45,12 @@
 
     }
 
-    .feature-card-meta{
-      span{
-      color: #000;
-      font-size: 14px;
-      font-weight: 600;
-    }
+    .feature-card-meta {
+      span {
+        color: $black;
+        font-size: 14px;
+        font-weight: 600;
+      }
     }
   }
 }

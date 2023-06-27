@@ -33,14 +33,14 @@
 
           span {
             &:nth-child(1) {
-              color: #000;
+              color: $black;
               font-size: 20px;
               font-weight: 700;
             }
 
             &:nth-child(2) {
               margin-top: 5px;
-              color: #363639;
+              color: $gray-9;
               font-size: 14px;
             }
           }
@@ -110,34 +110,22 @@
         line-height: 26px;
         /* identical to box height */
 
-        color: #000000;
+        color: $black;
 
       }
     }
 
 
     .col-three {
-      border-left: 1px solid #F0F0F0;
+      border-left: 1px solid $gray-7;
       padding-left: 20px;
       margin-left: 0px;
 
       & > div {
         &:not(:last-child) {
-          border-bottom: 1px solid #F0F0F0;
+          border-bottom: 1px solid $gray-7;
           padding-bottom: 10px;
           margin-bottom: 10px;
-        }
-
-        &:nth-child(3) {
-          .rate {
-            color: #FF002E !important;
-          }
-        }
-
-        &:nth-child(7) {
-          .rate {
-            color: #FF002E !important;
-          }
         }
 
         .rate {
@@ -149,8 +137,17 @@
           line-height: 103%;
           letter-spacing: -0.5px;
         }
+        &:nth-child(3) {
+          .rate {
+            color: #FF002E ;
+          }
+        }
 
-
+        &:nth-child(7) {
+          .rate {
+            color: #FF002E ;
+          }
+        }
       }
 
       h2 {
@@ -160,7 +157,7 @@
         font-size: 20px;
         line-height: 24px;
         /* identical to box height */
-        color: #000000;
+        color: $black;
       }
 
       h4 {
@@ -196,12 +193,12 @@
         /* identical to box height, or 25px */
         text-align: center;
         letter-spacing: -0.025em;
-        color: #000000;
+        color: $black;
       }
 
       .total-count-parent {
         h5 {
-          color: #000;
+          color: $black;
           font-size: 16px;
           font-weight: 600;
           line-height: 103%;
@@ -214,7 +211,7 @@
           align-items: center;
           column-gap: 5px;
           span {
-            color: #636363;
+            color: $gray-8;
             font-size: 14px;
             font-family: Poppins;
             font-weight: 600;

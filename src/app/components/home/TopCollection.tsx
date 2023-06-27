@@ -1,7 +1,14 @@
-import React from 'react';
+"use client"
+import React, {useEffect} from 'react';
 import Button from "@/app/components/Button";
+import AOS from "aos";
 
 const TopCollection = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
 
     const data = [
         {
@@ -66,7 +73,7 @@ const TopCollection = () => {
 
 
     return (
-        <section className="top-collection-section">
+        <section className="top-collection-section" id="resource-section" data-aos="fade-down">
             <div className="container">
                 <div className="col-one">
                     <img src="/unsplash_F56Y7dgrAkc.png" alt=""/>

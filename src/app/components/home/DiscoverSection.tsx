@@ -1,9 +1,15 @@
 "use client"
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Button from "@/app/components/Button";
+import AOS from 'aos';
+
 
 const DiscoverSection = () => {
+
+    useEffect(()=>{
+        AOS.init();
+    }, [])
 
     const categories = [
         "All Categories",
@@ -49,7 +55,7 @@ const DiscoverSection = () => {
 
 
     return (
-        <section className="discover-section">
+        <section className="discover-section" id="about-section" data-aos="zoom-in-down" data-aos-duration="4000">
             <div className="container">
 
                 <h1 className="section-title">Discover more NFTs</h1>

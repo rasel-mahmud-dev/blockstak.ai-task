@@ -1,7 +1,13 @@
-import React from 'react';
+"use client"
+import React, {useEffect} from 'react';
 import Button from "@/app/components/Button";
+import AOS from "aos";
 
 const CollectionFeatures = () => {
+
+    useEffect(()=>{
+        AOS.init();
+    }, [])
 
     type Images = {
         [key: number]: {
@@ -39,7 +45,7 @@ const CollectionFeatures = () => {
     }
 
     return (
-        <section className="collection-section">
+        <section className="collection-section" data-aos="zoom-in-up" data-aos-duration="4000">
             <div className="container">
 
                 <div>

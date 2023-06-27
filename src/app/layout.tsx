@@ -1,6 +1,8 @@
 import './globals.css'
 import "src/styles/main.scss"
 import {DM_Sans} from 'next/font/google'
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 
 const inter = DM_Sans({weight: "400", subsets: ['latin']})
 

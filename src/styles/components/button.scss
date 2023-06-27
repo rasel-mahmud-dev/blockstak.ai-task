@@ -11,7 +11,8 @@
   border-radius: 100px;
   box-sizing: border-box;
   white-space: nowrap;
-
+  transition: all .4s ease;
+  cursor: pointer;
   &-sm{
     padding: 5px 10px;
     height: 32px;
@@ -28,14 +29,28 @@
 
   &-primary{
     background: $primary-main;
-    color: white;
+    color: white !important;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
   }
   &-light{
     background: rgba(220, 220, 220, 0.20);
+    &:hover{
+      background: rgba(82, 82, 82, 0.2);
+      color: white;
+    }
   }
   &-primary-outline{
     border: 2px solid $primary-deep;
     color: $primary-main;
+
+    &:hover{
+      background: $primary-deep;
+      color: white;
+    }
   }
 
   &-secondary-outline{

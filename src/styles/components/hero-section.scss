@@ -98,6 +98,7 @@
   }
 
   li {
+    min-width: 130px;
     list-style: none;
 
     h1 {
@@ -107,7 +108,7 @@
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0.05em;
-        color: #000000;
+        color: $black;
       }
       svg{
         font-size: 40px;

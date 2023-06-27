@@ -1,10 +1,21 @@
-import React from 'react';
+"use client"
+import React, {useEffect} from 'react';
 import Button from "@/app/components/Button";
 import {HiPlusSm} from "react-icons/hi";
 
+import CountUp from 'react-countup';
+
+import AOS from "aos";
+
 const HeroSection = () => {
+
+    useEffect(()=>{
+        AOS.init();
+    }, [])
+
+
     return (
-        <section>
+        <section id="hero-section" data-aos="fade-up" data-aos-duration="4000">
             <div className="container">
                 <div className="hero-content">
                     <div>
@@ -15,15 +26,21 @@ const HeroSection = () => {
 
                         <div className="slats">
                             <li>
-                                <h1 className="flex align-center"><span>98k</span> <HiPlusSm /></h1>
+                                <h1 className="flex align-center"><span>
+                                    <CountUp duration={5} end={98} />K
+                                </span> <HiPlusSm /></h1>
                                 <span>Artwork</span>
                             </li>
                             <li>
-                                <h1 className="flex align-center"><span>12k</span> <HiPlusSm /></h1>
+                                <h1 className="flex align-center"><span>
+                                     <CountUp duration={2} end={12} />K
+                                    </span> <HiPlusSm /></h1>
                                 <span>Auction</span>
                             </li>
                             <li>
-                                <h1 className="flex align-center"><span>15k</span> <HiPlusSm /></h1>
+                                <h1 className="flex align-center"><span>
+                                     <CountUp duration={2.5} end={15} />K
+                                </span> <HiPlusSm /></h1>
                                 <span>Artist</span>
                             </li>
 

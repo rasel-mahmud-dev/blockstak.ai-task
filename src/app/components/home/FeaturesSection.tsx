@@ -1,8 +1,20 @@
-import React from 'react';
+"use client"
+
+import React, {useEffect} from 'react';
+
+
+import AOS from "aos";
 
 const FeaturesSection = () => {
+
+    useEffect(()=>{
+        AOS.init();
+    }, [])
+
+
     return (
-        <section className="features">
+        <section className="features"  data-aos="fade-down" data-aos-duration="4000">
+
             <div className="container">
 
                 <div>

@@ -35,6 +35,18 @@
 
       li {
         list-style: none;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: $black;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.64px;
+          &:hover{
+            color: $primary-deep;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
@@ -66,6 +78,13 @@
   min-width: 300px;
   max-width: 200px;
   color: $gray-2;
+
+  input{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+  }
 
   img {
     width: 24px;

@@ -50,6 +50,11 @@
       border-radius: 13.165px;
       border: 1.097px solid rgba(242, 242, 242, 0.50);
       background: #FFF;
+      transition: box-shadow .3s ease, transform .3s ease;;
+      &:hover{
+        box-shadow: 0 2px 16px 0px #2c65ec42;
+        transform: scale(1.03);
+      }
 
       .discover-card-image {
         height: 222px;
@@ -61,45 +66,49 @@
         }
       }
 
-      .discover-card-body{
+      .discover-card-body {
         padding: 13px 13px 0 13px;
-        .avatar-group{
+
+        .avatar-group {
           display: flex;
           align-items: center;
           margin-left: 10px;
           margin-top: -30px;
-          //transform: translateY(-30px);
-          img{
+
+          img {
             margin-left: -14px;
           }
         }
 
-        h4{
+        h4 {
           margin-top: 10px;
           margin-bottom: 10px;
-          color: #000;
+          color: $black;
           font-size: 19.747px;
           font-weight: 700;
           line-height: 19.146px;
         }
 
-        .price-row{
+        .price-row {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          border-bottom:1px solid #F4F4F4;
+          border-bottom: 1px solid $gray-3;
           padding-bottom: 20px;
+
           & > div {
             display: flex;
             align-items: center;
-            span{
-              color: #00AC4F;
+
+            span {
+              color: $secondary-main;
               font-size: 10.971px;
               font-weight: 700;
               margin-left: 5px;
             }
           }
-          p{
+
+          p {
             color: #838383;
             text-align: right;
             font-size: 13.165px;
@@ -108,16 +117,17 @@
           }
         }
 
-        .action-row{
+        .action-row {
           margin-top: 10px;
           display: flex;
           align-items: center;
           justify-content: space-between;
 
-          .btn{
+          .btn {
             height: 35px;
-            span{
-              color: #5539A8;
+
+            span {
+              color: $primary-purple;;
               text-align: right;
               font-size: 10.971px;
               font-weight: 700;
@@ -125,8 +135,8 @@
             }
           }
 
-          span{
-            color: #4F33A3;
+          span {
+            color: $primary-purple;
             font-size: 15.359px;
             font-weight: 500;
           }
@@ -138,8 +148,8 @@
   }
 }
 
-.discover-more-btn{
-  color: #4F33A3;
+.discover-more-btn {
+  color: $primary-purple;
   font-size: 20px;
   font-weight: 500;
   margin: 55px auto 0 auto;
