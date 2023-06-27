@@ -1,3 +1,5 @@
 
-@import "variable";
-@import "shared";
+@import "./shared.scss";
+@import "./variable.scss";
+@import "./components/button.scss";
+@import "./components/navigation.scss";
