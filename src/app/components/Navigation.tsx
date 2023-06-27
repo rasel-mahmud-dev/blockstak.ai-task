@@ -9,14 +9,12 @@ const Navigation = () => {
                     <div className="nav-logo">
                         <img src="/NFters.svg" alt="logo"/>
                     </div>
-
                     <div className="nav-items">
                         <li>Marketplace</li>
                         <li>Resource</li>
                         <li>About</li>
                         <li>Marketplace</li>
                     </div>
-
                 </div>
 
                 <div className="right-nav-content">

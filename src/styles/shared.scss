@@ -4,3 +4,43 @@
   margin: auto;
 }
 
+
+.hero-title{
+  font-family: 'Integral CF';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  color: #000000;
+
+}
+
+.section-title{
+  font-family: 'Integral CF';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.para{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #565656;
+}
+
+.flex{display: flex}
+.align-center{align-items: center}
+.align-start{align-items: start}
+.justify-center{justify-content: center}
+.justify-start{justify-content: start}
+.justify-between{justify-content: space-between}
+
+.gap-x-22{
+  column-gap: 22px ;
+}
+.gap-x-10{column-gap: 10px}
+.mt-10{margin-top: 10px}

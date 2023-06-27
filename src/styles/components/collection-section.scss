@@ -1,0 +1,44 @@
+.collection-section {
+  background: $gray-4;
+  backdrop-filter: blur(25px);
+  padding: 65px 0;
+}
+
+
+.feature-card-list {
+  margin-top: 55px;
+  column-gap: 31px;
+  display: flex;
+
+  .feature-card {
+    .feature-image-row {
+      display: flex;
+      margin-bottom: 30px;
+      column-gap: 8.25px;
+
+      div {
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 8.25px;
+        }
+      }
+    }
+    h5{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      /* identical to box height */
+
+      color: #000000;
+    }
+    span{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+    }
+  }
+}

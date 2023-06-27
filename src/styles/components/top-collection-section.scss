@@ -1,0 +1,150 @@
+
+.top-collection-section {
+  padding: 134px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+
+    .col-one {
+      & > img {
+        border-radius: 24px;
+      }
+
+      & > div {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .col-two {
+      margin-left: 20px;
+
+      & > div {
+        column-gap: 10px;
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+
+      .right-content {
+        & > div {
+          margin-top: 8px;
+          margin-bottom: 15px;
+
+          button {
+            margin-left: 8px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+
+      h5 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        /* identical to box height */
+
+        color: #000000;
+
+      }
+    }
+
+
+    .col-three {
+      border-left: 2px solid #F0F0F0;
+      padding-left: 20px;
+      margin-left: 0px;
+
+      & > div {
+        &:not(:last-child) {
+          border-bottom: 2px solid #F0F0F0;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      h2 {
+        font-family: 'Integral CF';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+        color: #000000;
+      }
+
+      h4 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        color: #3D00B7;
+        margin-bottom: 32px;
+      }
+
+      .verified {
+        position: relative;
+
+        &::after {
+          content: "";
+          background-image: url("/verify1.svg");
+          width: 30px;
+          height: 30px;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -4px;
+          right: -5px;
+        }
+      }
+
+      .collection-no {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 103%;
+        /* identical to box height, or 25px */
+        text-align: center;
+        letter-spacing: -0.025em;
+        color: #000000;
+      }
+
+      .total-count {
+        span {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 103%;
+          /* or 14px */
+          letter-spacing: -0.025em;
+          color: #636363
+        }
+      }
+
+      .rate {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 103%;
+        /* identical to box height, or 21px */
+        text-align: right;
+        letter-spacing: -0.025em;
+        color: #FF002E;
+      }
+    }
+  }
+}

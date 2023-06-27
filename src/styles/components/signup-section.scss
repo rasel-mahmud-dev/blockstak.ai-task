@@ -1,0 +1,54 @@
+.signup-section {
+  padding-top: 102px;
+  padding-bottom: 122px;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 140px;
+    align-items: center;
+
+    .signup-section-left {
+      position: relative;
+
+      .img {
+        position: relative;
+        height: max-content;
+        width: max-content;
+
+        img {
+          &:nth-child(2) {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            transform: translate(50%, 50%);
+          }
+        }
+
+        &.img2 {
+          position: relative;
+          right: 0;
+          transform: translateX(64px) translateY(100px);
+        }
+
+        &.img3 {
+          position: relative;
+          right: -100px;
+          top: 52px;
+        }
+      }
+    }
+
+    .signup-section-right{
+      p{
+        margin-bottom: 32px;
+        margin-top: 40px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        color: #636363;
+      }
+    }
+  }
+}
