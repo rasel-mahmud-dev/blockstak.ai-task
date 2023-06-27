@@ -30,6 +30,9 @@
     background: $primary-main;
     color: white;
   }
+  &-light{
+    background: rgba(220, 220, 220, 0.20);
+  }
   &-primary-outline{
     border: 2px solid $primary-deep;
     color: $primary-main;

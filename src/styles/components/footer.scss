@@ -1,0 +1,110 @@
+
+footer {
+
+  .container {
+    padding-top: 80px;
+    padding-bottom: 79px;
+  }
+
+  .footer-cols{
+    display: grid;
+    grid-template-columns:minmax(360px, 1fr) repeat(2, 1fr) minmax(380px, 1fr);
+    column-gap: 30px;
+
+    .footer-col{
+
+      h2{
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      .footer-links{
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+
+        a{
+          text-decoration: none;
+          color: #3D3D3D;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 200%;
+          transition: all .3s ease;
+          &:hover{
+            color: $primary-deep;
+            text-decoration: underline;
+          }
+
+        }
+      }
+
+      .subscribe-input{
+        margin-top: 24px;
+        border-radius: 45.595px;
+        border: 2px solid #F1F1F1;
+        background: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 7px 7px 20px;
+
+        span{
+          color: #959595;
+          font-size: 12.159px;
+        }
+
+        .btn{
+          color: #FFF;
+          font-size: 12.159px;
+          letter-spacing: 0.79px;
+          padding: 15.2px 30.4px;
+          height: auto;
+        }
+      }
+    }
+
+    .footer-col1{
+      margin-right: 50px;
+    }
+    .footer-col2{}
+    .footer-col3{}
+    .footer-col4{}
+
+  }
+
+
+  h1 {
+    color: #000;
+    font-size: 24px;
+    font-family: Integral CF;
+    font-weight: 700;
+    margin-bottom: 27px;
+  }
+
+  p {
+    margin-top: 24px;
+    color: #565656;
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .social-links {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .bottom-footer {
+    color: #A4A4A4;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    border-top: 1px solid #F4F4F4;
+    padding: 10px 0px;
+  }
+}
+

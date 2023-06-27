@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "@/app/components/Button";
+import {HiPlusSm} from "react-icons/hi";
 
 const HeroSection = () => {
     return (
@@ -14,15 +15,15 @@ const HeroSection = () => {
 
                         <div className="slats">
                             <li>
-                                <h1>98k+</h1>
+                                <h1 className="flex align-center"><span>98k</span> <HiPlusSm /></h1>
                                 <span>Artwork</span>
                             </li>
                             <li>
-                                <h1>12k+</h1>
+                                <h1 className="flex align-center"><span>12k</span> <HiPlusSm /></h1>
                                 <span>Auction</span>
                             </li>
                             <li>
-                                <h1>15k+</h1>
+                                <h1 className="flex align-center"><span>15k</span> <HiPlusSm /></h1>
                                 <span>Artist</span>
                             </li>
 

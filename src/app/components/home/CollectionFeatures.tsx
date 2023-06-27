@@ -2,6 +2,35 @@ import React from 'react';
 import Button from "@/app/components/Button";
 
 const CollectionFeatures = () => {
+
+    const images: any = {
+        0: {
+            thumb: "/unsplash_F56Y7dgrAkc(1).png",
+            gallery: [
+                "/unsplash_pVoEPpLw818(1).png",
+                "/unsplash_LpbyDENbQQg.png",
+                "/unsplash_9anj7QWy-2g.png",
+
+            ]
+        },
+        1: {
+            thumb: "/unsplash_F56Y7dgrAkc(2).png",
+            gallery: [
+                "/unsplash_LpbyDENbQQg.png",
+                "/unsplash_pVoEPpLw818(1).png",
+                "/unsplash_9anj7QWy-2g345341).png",
+            ]
+        },
+        2: {
+            thumb: "/unsplash_F56Y7dgrAkcasdfasd(3).png",
+            gallery: [
+                "/unsplash_pVoEPpLw8183242(3).png",
+                "/unsplash_LpbyDENbQQgasdasdasd(1).png",
+                "/unsplash_9anj7QWy-2g234234(2).png",
+            ]
+        }
+    }
+
     return (
         <section className="collection-section">
             <div className="container">
@@ -15,16 +44,18 @@ const CollectionFeatures = () => {
                         <div className="feature-card" key={i}>
                             <div className="feature-image-row">
                                 <div>
-                                    <img src="/unsplash_F56Y7dgrAkc(1).png" alt=""/>
+                                    <img src={images[i].thumb} alt=""/>
                                 </div>
                                 <div>
-                                    <img src="/unsplash_pVoEPpLw818(1).png" alt=""/>
-                                    <img src="/unsplash_pVoEPpLw818(1).png" alt=""/>
-                                    <img src="/unsplash_pVoEPpLw818(1).png" alt=""/>
+                                    { images[i].gallery.map(g=>(
+                                        <>
+                                            <img src={g} alt=""/>
+                                        </>
+                                    )) }
                                 </div>
                             </div>
                             <h5>Amazing Collection</h5>
-                            <div className="flex align-center justify-between">
+                            <div className="flex align-center justify-between feature-card-meta">
                                 <div className="flex align-center gap-x-10 mt-10">
                                     <img src="/Ellipse 9(1).png" alt=""/>
                                     <span>by Arkhan</span>

@@ -70,15 +70,15 @@ const TopCollection = () => {
             <div className="container">
                 <div className="col-one">
                     <img src="/unsplash_F56Y7dgrAkc.png" alt=""/>
-                    <div>
-                        <span>
-                            <img src="/Ellipse95.png" alt=""/>
-                           <div>
+                    <div className="meta-info">
+                        <span className="flex align-center">
+                            <img src="/Ellipsesdf95.png" alt=""/>
+                           <div className="meta-info-title">
                                <span>The Futr Abstr</span>
                                <span>10 in the stock</span>
                            </div>
                         </span>
-                        <div className="">
+                        <div className="meta-info-price">
                             <span>Highest Bid</span>
                             <span className="flex align-center">
                                 <img src="/ethereum2.svg" alt=""/>
@@ -89,7 +89,7 @@ const TopCollection = () => {
                 </div>
 
                 <div className="col-two">
-                    {data.map((item, i )=> (
+                    {data.map((item, i) => (
                         <div className="flex">
                             <img src={item.image} alt=""/>
                             <div className="right-content">
@@ -120,14 +120,14 @@ const TopCollection = () => {
                                 <span className="collection-no">{index + 1}</span>
                                 <div className="flex align-center gap-x-22">
 
-                                    <div className={collection.isBadge ? "verified": ""}>
+                                    <div className={collection.isBadge ? "verified" : ""}>
                                         <img src={collection.image} alt=""/>
                                     </div>
 
-                                    <div>
+                                    <div className="total-count-parent">
                                         <h5>{collection.title}</h5>
                                         <span className="total-count">
-                                            <img src="/ethereum2(1).svg" alt=""/>
+                                            <img src="/ethereum4561.svg" alt=""/>
                                             <span>{collection.count}</span>
                                         </span>
                                     </div>
