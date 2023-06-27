@@ -9,7 +9,7 @@ import AOS from "aos";
 
 const HeroSection = () => {
 
-    useEffect(()=>{
+    useEffect(() => {
         AOS.init();
     }, [])
 
@@ -19,28 +19,29 @@ const HeroSection = () => {
             <div className="container">
                 <div className="hero-content">
                     <div>
-                        <h1 className="hero-title">Discover, and collect Digital Art  NFTs </h1>
-                        <p className="para">Digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, Sell, and discover exclusive digital assets.</p>
+                        <h1 className="hero-title">Discover, and collect Digital Art NFTs </h1>
+                        <p className="para">Digital marketplace for crypto collectibles and non-fungible tokens (NFTs).
+                            Buy, Sell, and discover exclusive digital assets.</p>
 
                         <Button>Explore Now</Button>
 
                         <div className="slats">
                             <li>
                                 <h1 className="flex align-center"><span>
-                                    <CountUp duration={5} end={98} />K
-                                </span> <HiPlusSm /></h1>
+                                    <CountUp duration={5} end={98}/>K
+                                </span> <HiPlusSm/></h1>
                                 <span>Artwork</span>
                             </li>
                             <li>
                                 <h1 className="flex align-center"><span>
-                                     <CountUp duration={2} end={12} />K
-                                    </span> <HiPlusSm /></h1>
+                                     <CountUp duration={2} end={12}/>K
+                                    </span> <HiPlusSm/></h1>
                                 <span>Auction</span>
                             </li>
                             <li>
                                 <h1 className="flex align-center"><span>
-                                     <CountUp duration={2.5} end={15} />K
-                                </span> <HiPlusSm /></h1>
+                                     <CountUp duration={2.5} end={15}/>K
+                                </span> <HiPlusSm/></h1>
                                 <span>Artist</span>
                             </li>
 
@@ -57,12 +58,30 @@ const HeroSection = () => {
                         </div>
 
                         <div className="image-stack-overlay">
+                            <h3>Abstr Gradient NFT</h3>
+                            <div>
+                                <img src="/Ellipse95.png" alt=""/>
+                                <span>Arkhan17</span>
+                            </div>
 
-                                <h3>Abstr Gradient NFT</h3>
+                            <div className="footer-bg">
                                 <div>
-                                    <img src="/Ellipse95.png" alt=""/>
-                                    <span>Arkhan17</span>
+                                    <span>Current Bid</span>
+                                    <div>
+                                        <img src="/ethereum2(3).svg" alt=""/>
+                                        <span>
+                                        0.25 ETH
+                                        </span>
+                                    </div>
+
                                 </div>
+                                <div className="footer-bg-bottom">
+                                    <span>Ends in</span>
+                                    <span>
+                                        12h  43m  42s
+                                    </span>
+                                </div>
+                            </div>
 
                         </div>
 
