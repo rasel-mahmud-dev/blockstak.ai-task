@@ -4,6 +4,19 @@
   border-bottom: 1px solid $gray-1;
   height: 109px;
   line-height: 109px;
+  display: flex;
+  justify-content: space-between;
+
+  @include getDown(800px){
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 
 
   .nav-logo {
@@ -19,6 +32,12 @@
     border-right: 1px solid $gray-3;
     height: 47px;
     padding-right: 33px;
+    @include getDown(896px){
+      padding-right: 15px;
+    }
+    @include getDown(800px){
+      border-right: none;
+    }
   }
 
   .left-nav-content {
@@ -32,6 +51,14 @@
       justify-content: space-between;
       align-items: center;
       column-gap: 47px;
+
+      @include getDown(896px){
+        margin-left: 16px;
+        column-gap: 20px;
+      }
+      @include getDown(800px){
+        display: none;
+      }
 
       li {
         list-style: none;
@@ -56,6 +83,19 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+
+    @include getDown(961px){
+      margin-left: 10px;
+    }
+
+
+    button{
+      &:nth-child(3){
+        @include getDown(520px){
+          display: none;
+        }
+      }
+    }
   }
 
 
@@ -75,8 +115,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 300px;
-  max-width: 200px;
+  width: 100%;
   color: $gray-2;
 
   input{

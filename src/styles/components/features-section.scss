@@ -8,10 +8,25 @@
     align-items: center;
     height: 326px;
     column-gap: 76px;
+    @include getDown(1132px){
+      column-gap: 40px;
+      transition: column-gap .4s ease;
+    }
 
-
+    @include getDown(800px){
+      flex-direction: column;
+      padding: 50px 20px;
+      transition: padding .4s ease;
+      column-gap: 0px;
+    }
 
     .feature-item{
+
+      @include getDown(800px){
+        margin-top: 30px;
+        transition: margin-top .4s ease;
+      }
+
       .feature-logo {
         display: flex;
         align-items: center;

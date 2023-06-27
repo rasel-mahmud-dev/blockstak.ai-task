@@ -98,11 +98,11 @@ const TopCollection = () => {
                 <div className="col-two">
                     {data.map((item, i) => (
                         <div className="flex" key={i}>
-                            <img src={item.image} alt=""/>
+                            <img className="thumb-image" src={item.image} alt=""/>
                             <div className="right-content">
                                 <h5>{item.title}</h5>
                                 <div className="flex align-center  ">
-                                    <img src="/Ellipse95.png" alt=""/>
+                                    <img  src="/Ellipse95.png" alt=""/>
                                     <Button size="sm" rounded={true} variant="secondary-outline">
                                         <img src="/ethereum2(1).svg" alt=""/>
                                         <span>0.25 ETH</span>

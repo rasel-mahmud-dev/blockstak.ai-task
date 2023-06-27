@@ -7,16 +7,38 @@
 .feature-card-list {
   margin-top: 55px;
   column-gap: 31px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include getDown(1080px){
+    column-gap: 20px;
+  }
+  @include getDown(768px){
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 31px;
+  }
+  @include getDown(576px){
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 31px;
+  }
 
   .feature-card {
+
+    @include getDown(576px){
+      margin: auto;
+    }
+
     .feature-image-row {
       display: flex;
       margin-bottom: 30px;
       column-gap: 8.25px;
 
+      @include getDown(768px){
+        margin-bottom: 10px;
+      }
+
       img {
         display: flex;
+        width: 100%;
       }
 
       div {

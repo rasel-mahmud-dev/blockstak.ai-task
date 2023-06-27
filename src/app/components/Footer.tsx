@@ -55,9 +55,7 @@ const Footer = () => {
                             tips and tricks for navigating NFTs.</p>
 
                         <div className="subscribe-input">
-                            <span>
-                                Enter your email address..
-                            </span>
+                            <input placeholder="Enter your email address.. " />
                             <Button variant="primary">Subscibe Now</Button>
                         </div>
 

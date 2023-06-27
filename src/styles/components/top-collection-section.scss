@@ -7,16 +7,38 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
 
+    @include getDown(1142px){
+      column-gap: 10px;
+    }
+
+
+    @include getDown(1080px){
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 0px;
+    }
+
+
     .col-one {
       & > img {
         border-radius: 24px;
       }
 
+      @include getDown(1080px){
+        display: flex;
+      }
+
+      @include getDown(638px){
+        flex-direction: column;
+      }
       & > div {
         margin-top: 32px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include getDown(1080px){
+          flex-direction: column;
+          justify-content: flex-start;
+        }
       }
 
 
@@ -47,6 +69,11 @@
         }
 
         .meta-info-price {
+
+          @include getDown(1080px){
+            margin-top: 20px;
+          }
+
           span {
             &:nth-child(1) {
 
@@ -74,6 +101,7 @@
     .col-two {
       margin-left: 20px;
 
+
       & > div {
         column-gap: 10px;
 
@@ -81,6 +109,37 @@
           margin-top: 41px;
         }
       }
+
+      @include getDown(1080px){
+        display: flex;
+        margin-left: 0px;
+        column-gap: 10px;
+        margin-bottom:50px;
+        margin-top: 50px;
+        & > div {
+          margin-top: 0px !important;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          .thumb-image{
+            object-fit: cover;
+            border-radius: 20px;
+            @include getDown(740px){
+              margin-bottom: 10px;
+              min-height: 300px;
+            }
+          }
+        }
+
+      }
+      @include getDown(740px){
+        flex-wrap: wrap;
+        row-gap: 20px;
+      }
+
 
       .right-content {
         & > div {
@@ -93,6 +152,7 @@
 
             img {
               margin-right: 4px;
+
             }
           }
 
@@ -118,8 +178,21 @@
 
     .col-three {
       border-left: 1px solid $gray-7;
-      padding-left: 20px;
+      padding-left: 70px;
       margin-left: 0px;
+
+      @include getDown(1180px){
+        padding-left: 40px;
+      }
+      @include getDown(1100px){
+        padding-left: 10px;
+      }
+
+      @include getDown(1080px){
+        padding-left: 10px;
+      }
+
+
 
       & > div {
         &:not(:last-child) {
@@ -166,7 +239,7 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 23px;
-        color: #3D00B7;
+        color: $primary-deep;
         margin-bottom: 32px;
       }
 

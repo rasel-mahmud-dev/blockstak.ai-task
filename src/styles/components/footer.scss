@@ -6,34 +6,64 @@ footer {
     padding-bottom: 79px;
   }
 
-  .footer-cols{
+  .footer-cols {
     display: grid;
     grid-template-columns:minmax(360px, 1fr) repeat(2, 1fr) minmax(380px, 1fr);
     column-gap: 30px;
 
-    .footer-col{
+    @include getDown(1220px){
+      column-gap: 20px;
+    }
+    @include getDown(1090px){
+      grid-template-columns:minmax(310px, 1fr) repeat(2, 1fr) minmax(320px, 1fr);
+      column-gap: 20px;
+    }
 
-      h2{
+    @include getDown(918px){
+      grid-template-columns:minmax(270px, 1fr) repeat(2, 1fr) minmax(280px, 1fr);
+      column-gap: 16px;
+    }
+
+    @include getDown(860px){
+      grid-template-columns: minmax(400px, 1fr) repeat(2, 1fr) ;
+    }
+
+    @include getDown(702px){
+      grid-template-columns: minmax(350px, 1fr)  1fr ;
+      row-gap: 30px;
+      column-gap: 20px;
+    }
+
+    @include getDown(576px){
+      grid-template-columns: 1fr ;
+      row-gap: 30px;
+      column-gap: 20px;
+    }
+
+    .footer-col {
+
+      h2 {
         color: $black;
         font-size: 18px;
         font-weight: 700;
         text-transform: capitalize;
       }
 
-      .footer-links{
+      .footer-links {
         margin-top: 24px;
         display: flex;
         flex-direction: column;
         row-gap: 4px;
 
-        a{
+        a {
           text-decoration: none;
           color: #3D3D3D;
           font-size: 14px;
           font-weight: 500;
           line-height: 200%;
           transition: all .3s ease;
-          &:hover{
+
+          &:hover {
             color: $primary-deep;
             text-decoration: underline;
           }
@@ -41,7 +71,7 @@ footer {
         }
       }
 
-      .subscribe-input{
+      .subscribe-input {
         margin-top: 24px;
         border-radius: 45.595px;
         border: 2px solid $gray-5;
@@ -51,12 +81,19 @@ footer {
         justify-content: space-between;
         padding: 7px 7px 7px 20px;
 
-        span{
+        input {
           color: $gray-10;
           font-size: 12.159px;
+          outline: none;
+          border: none;
+          width: 100%;
+
+          &::placeholder {
+            color: inherit;
+          }
         }
 
-        .btn{
+        .btn {
           color: #FFF;
           font-size: 12.159px;
           letter-spacing: 0.79px;
@@ -66,12 +103,46 @@ footer {
       }
     }
 
-    .footer-col1{
+    .footer-col1 {
       margin-right: 50px;
+      @include getDown(1220px){
+        margin-right: 10px;
+      }
+
+      @include getDown(576px){
+        grid-column: 1/3;
     }
-    .footer-col2{}
-    .footer-col3{}
-    .footer-col4{}
+    }
+
+    .footer-col2 {
+      @include getDown(576px){
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+    }
+
+    .footer-col3 {
+      @include getDown(576px){
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+    }
+
+    .footer-col4 {
+      @include getDown(860px){
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      @include getDown(576px){
+        grid-column: 1/3;
+        grid-row: 3/3;
+
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
 
   }
 

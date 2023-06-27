@@ -8,8 +8,32 @@
     column-gap: 140px;
     align-items: center;
 
+    @include getDown(1102px) {
+      transition: column-gap .3s ease;
+      column-gap: 80px;
+    }
+
+    @include getDown(874px) {
+      column-gap: 40px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+
     .signup-section-left {
       position: relative;
+      @include getDown(874px) {
+
+      }
+
+      & > div {
+        @include getDown(622px) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 23px;
+          align-items: center;
+
+        }
+      }
 
       .img {
         position: relative;
@@ -36,11 +60,54 @@
           right: -100px;
           top: 52px;
         }
+
+        @include getDown(1102px) {
+          transition: all .3s ease;
+          &.img2 {
+            transform: translateX(24px) translateY(100px);
+          }
+          &.img3 {
+            right: -90px;
+            top: 22px;
+          }
+        }
+
+        @include getDown(874px) {
+
+          &.img2 {
+            transform: translateX(20%) translateY(100px);
+          }
+          &.img3 {
+            right: 0px;
+            top: 22px;
+          }
+        }
+
+        @include getDown(622px) {
+          margin: auto !important;
+          transform: none;
+
+          &.img2 {
+            transform: none;
+            position: relative;
+          }
+          &.img3 {
+            transform: none;
+            position: relative !important;
+          }
+        }
+
+
       }
     }
 
-    .signup-section-right{
-      p{
+    .signup-section-right {
+      @include getDown(874px) {
+        margin-top: 100px;
+        transition: margin-top .4s ease;
+      }
+
+      p {
         margin-bottom: 32px;
         margin-top: 40px;
         font-style: normal;

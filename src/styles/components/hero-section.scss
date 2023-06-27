@@ -5,12 +5,44 @@
   padding-top: 57px;
   padding-bottom: 122px;
 
+  @include getDown(1080px) {
+    grid-template-columns: minmax(400px, 1fr) 1fr;
+  }
+
+  @include getDown(912px) {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    @include getDown(768px) {
+      font-size: 25px;
+    }
+  }
+
+  & > div {
+    &:nth-child(1) {
+      @include getDown(768px) {
+        grid-row: 2 / 4;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+    }
+  }
+
   p {
     margin-top: 22px;
     color: #565656;
     font-size: 20px;
     line-height: 160%;
     margin-bottom: 41px;
+    @include getDown(768px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -19,6 +51,28 @@
   height: 440px;
   width: 400px;
   margin-left: auto;
+  transform: translateX(-45px);
+
+  @include getDown(912px) {
+    row-span: 0;
+    margin: auto;
+  }
+
+
+  @include getDown(668px) {
+    img {
+      max-width: 500px;
+      object-fit: cover;
+    }
+  }
+
+  @include getDown(576px) {
+    transform: translateY(0%);
+  }
+  @include getDown(525px) {
+    transform: translateX(-15px);
+  }
+
 
   & > img {
     border-radius: 24px;
@@ -49,6 +103,10 @@
     left: 0%;
     transform: translateX(-50%);
     z-index: 4;
+
+    @include getDown(576px) {
+      display: none;
+    }
   }
 
   .image-stack-overlay {
@@ -102,7 +160,8 @@
     list-style: none;
 
     h1 {
-      span{font-family: 'Integral CF', serif;
+      span {
+        font-family: 'Integral CF', serif;
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
@@ -110,7 +169,8 @@
         letter-spacing: 0.05em;
         color: $black;
       }
-      svg{
+
+      svg {
         font-size: 40px;
         margin-top: 3px;
         margin-left: -8px;
