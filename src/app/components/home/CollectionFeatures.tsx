@@ -3,7 +3,14 @@ import Button from "@/app/components/Button";
 
 const CollectionFeatures = () => {
 
-    const images: any = {
+    type Images = {
+        [key: number]: {
+            thumb: string,
+            gallery: string[]
+        }
+    }
+
+    const images: Images = {
         0: {
             thumb: "/unsplash_F56Y7dgrAkc(1).png",
             gallery: [
@@ -47,11 +54,9 @@ const CollectionFeatures = () => {
                                     <img src={images[i].thumb} alt=""/>
                                 </div>
                                 <div>
-                                    { images[i].gallery.map(g=>(
-                                        <>
-                                            <img src={g} alt=""/>
-                                        </>
-                                    )) }
+                                    {images[i]?.gallery?.map((g: string, index: number) => (
+                                        <img src={g} alt="" key={index}/>
+                                    ))}
                                 </div>
                             </div>
                             <h5>Amazing Collection</h5>

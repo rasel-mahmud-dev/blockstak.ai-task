@@ -90,7 +90,7 @@ const TopCollection = () => {
 
                 <div className="col-two">
                     {data.map((item, i) => (
-                        <div className="flex">
+                        <div className="flex" key={i}>
                             <img src={item.image} alt=""/>
                             <div className="right-content">
                                 <h5>{item.title}</h5>

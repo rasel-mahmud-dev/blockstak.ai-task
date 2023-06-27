@@ -42,7 +42,7 @@ const DiscoverSection = () => {
         }
     ]
 
-    function sortArr(arr, isOdd){
+    function sortArr(arr:  {thumb: string, title: string}[], isOdd: number){
         let cpArray = [...arr]
         return isOdd ? cpArray.reverse() : arr
     }
@@ -58,7 +58,7 @@ const DiscoverSection = () => {
                 <div className="discover-categories">
                     <div>
                         {categories.map((category, i) => (
-                            <Button variant={i === activeIndex ? "primary" : "light"}
+                            <Button key={i} variant={i === activeIndex ? "primary" : "light"}
                                     onClick={() => setActiveIndex(i)}>
                                 {category}
                             </Button>
@@ -73,8 +73,8 @@ const DiscoverSection = () => {
 
 
                 <div className="discover-card-items">
-                    {Array.from({length: 4}).fill(1).map((_, i)=> sortArr(discoverData, i % 2).map(item => (
-                        <div className="discover-card">
+                    {Array.from({length: 4}).fill(1).map((_, i: number)=> sortArr(discoverData, i % 2).map((item) => (
+                        <div className="discover-card" key={item.title}>
 
                             <div className="discover-card-image">
                                 <img src={item.thumb} alt=""/>
