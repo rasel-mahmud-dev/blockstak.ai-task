@@ -1,0 +1,19 @@
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+.header{
+  background: white;
+  border-bottom: 1px solid rgba(61, 61, 61, 0.33);
+
+  .nav-logo{
+    img{
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
